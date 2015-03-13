@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>InAppBrowser.addEventListener Example</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-         var ref = window.open('http://www.google.com', '_blank', 'location=yes');
-         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
-         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
-         ref.addEventListener('exit', function() { alert(event.type); });
-    }
-
-    </script>
-  </head>
-  <body>
-  </body>
+	<head>
+		<title>File Sample</title>
+		<script type="text/javascript">
+		function openInWebView(url)
+    	{
+	        var anchor = document.createElement('a');
+	        anchor.setAttribute('href', url);
+	        //anchor.setAttribute('target', '_self');
+	        
+	        var dispatch = document.createEvent('HTMLEvents')
+	        dispatch.initEvent('click', true, true);
+	        
+	        anchor.dispatchEvent(dispatch);
+    	}
+    	openInWebView('http://www.acepreview.co.in/Bank2/login.aspx');
+		</script>
+	</head>
+	<body>		
+	</body>
 </html>
