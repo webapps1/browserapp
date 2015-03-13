@@ -39,7 +39,7 @@ var app = {
 
         // attach listener to loadstart
         ref.addEventListener('loadstart', function(event) { 
-            var urlSuccessPage = "http://google.com/";
+            var urlSuccessPage = "http://google.com";
             if (event.url == urlSuccessPage) {
             ref.close();    
             }
